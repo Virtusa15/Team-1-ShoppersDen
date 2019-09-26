@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function Validate() {
+    var password = document.getElementById("pass").value;
+    var confirmPassword = document.getElementById("repass").value;
+    if (password != confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+    }
+    return true;
+}
+</script>
+<style>
+body{
+background-image:url("rg.jpg");
+background-repeat:no-repeat;
+background-size:3000px;
+background-color:white;
+margin-top:30px;
+
+ 
+
+}
+table, th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  row-collapse:collapse;
+  
+}
+th, td {
+  padding: 6px;
+}
+</style>
+</style>
+</head>
+<body>
+<form method="post" action="servlet2">
+ <table cellpadding="2" width="30%"  align="center" border="4"  cellspacing="2"  >
+<caption><h2><b style="color: white"><font color="blue" size="9">Registration form</font></b></h2></caption>
+ <tr>
+ <th>Enter name</th>
+ <td><input type="text" name="name" id="i1" size="30" maxlength="10" title="enter your name" placeholder="enter your name" required/></td>
+</tr>
+ <tr>
+ 
+ <th>Enter your email</th>
+ <td><input type="email" name="email" size="30"/></td>
+ </tr>
+ <tr>
+ <th>Enter your mobile</th>
+ <td><input type="number" name="mobile" size="90"/></td>
+ </tr>
+ <th>Enter your address</th>
+ <td><textarea rows="4" cols="30" name="addr" size="32"></textarea></td>
+ </tr>
+ <tr>
+ <th>Enter user id</th>
+ <td><input type="text"  name="userid" size="30"/></td>
+ </tr>
+ <tr>
+ <th>Enter your password</th>
+ <td><input type="password"  size="30" id="pass" name="password" title="1 letter capital and 1 letter small and 1 letter number must and minimum 5 letters"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"/></td>
+ </tr>
+<tr>
+ <th>ReEnter your password</th>
+ <td><input id="repass" type="password" name="name" size="30"></td>
+ </tr>
+ <tr>
+ <th>Select your gender</th>
+ <td>
+ Male<input type="radio" name="g" value="m"/>
+Female<input type="radio" name="g" value="f"/>
+ </td>
+ </tr>
+<tr>
+ <th>Select your Country</th>
+
+ <td>
+ <select name="country" >
+ <option value="-1"selected="selected" disabled="disabled">Select your country</option>
+ <option value="india">India</option>
+ <option value="Australia">Australia</option>
+ <option value="us">United States</option>
+ <option value="canada">canada</option>
+ <option value="oman">oman</option>
+ </select>
+ </td>
+ </tr><br>
+
+ <tr>
+  <span></span>
+
+ <td   colspan="2" align="center"><input type="submit" value="Submit" onclick="return Validate()" />
+ <input type="reset" value="Reset Data"/>
+ </td>
+ </tr>
+ </table>
+ </form>
+ </body>
+ </html>
